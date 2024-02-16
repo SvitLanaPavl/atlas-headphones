@@ -1,7 +1,7 @@
 /* SUMMARY
     1. GLOBAL
-    2. LAYOUT
-    3. SECTION
+    2. HEADER
+    3. MAIN
     4. FOOTER
 */
 
@@ -25,6 +25,71 @@
     --font-size-text-sm: 14px;
     --font-size-text-xsm: 12px;
     --button-hover-opacity: 0.9;
+    --font-weight-reg: 700;
+    --font-weight-light: 400;
+    --line-height-norm: normal;
+    --line-height-wide: 26px;
    }
 
+   /* Base
+   ======================= */
+   *, *:before, *:after {
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  a {
+    text-decoration: none;
+  }
+  button {
+    width: 162px;
+    height: 44px;
+    border-radius: 22px;
+    background: var(--color-red);
+    color: var(--color-white);
+    border: 0;font-family: var(--font-family);
+    font-weight: var(--font-weight-reg);
+  }
+
+
+ /*** 2. HEADER ***/
+header {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+#header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#logo {
+    width: 161px;
+    height: 32px;
+}
+nav a {
+    color: var(--color-white);
+    font-size: var(--font-size-text-xsm);
+}
+
+/*** 3. MAIN ***/
+#hero {
+    background: url(images/headphones_hero_1.jpg);
+    height: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#hero-block {
+    color: var(--color-white);
+    width: 55%;
+    text-align: center;
+    align-self: center;
+}
+
+/*** 4. FOOTER ***/
 
