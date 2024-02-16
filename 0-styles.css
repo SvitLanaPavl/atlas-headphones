@@ -18,7 +18,7 @@
    :root {
     --color-white: #FFF;
     --color-red: #FF6565;
-    --font-family: "Source Sans Pro";
+    --font-family: "Source Sans Pro", sans-serif;
     --font-size-lg: 46px;
     --font-size-title: 32px;
     --font-size-text: 16px;
@@ -38,6 +38,7 @@
   }
   html {
     scroll-behavior: smooth;
+    font-family: var(--font-family);
   }
   a {
     text-decoration: none;
@@ -48,10 +49,15 @@
     border-radius: 22px;
     background: var(--color-red);
     color: var(--color-white);
-    border: 0;font-family: var(--font-family);
+    border: 0;
+    font-family: var(--font-family);
     font-weight: var(--font-weight-reg);
+    font-size: var(--font-size-text-sm);
   }
-
+  button:hover {
+    opacity: var(--button-hover-opacity);
+    cursor: pointer;
+  }
 
  /*** 2. HEADER ***/
 header {
@@ -100,10 +106,24 @@ nav a {
 #hero-block {
     margin-top: 350px;
     color: var(--color-white);
-    width: 55%;
+    width: 50%;
     text-align: center;
     align-self: center;
 }
-
+#hero-block h1, h4 {
+    line-height: var(--line-height-norm);
+}
+#hero-block h1 {
+    margin-bottom: 0px;
+}
+#hero-block h4 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+#hero-block p {
+    line-height: var(--line-height-wide);
+    font-weight: 400;
+    margin-top: 70px;
+}
 /*** 4. FOOTER ***/
 
