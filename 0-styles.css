@@ -43,7 +43,8 @@
   a {
     text-decoration: none;
   }
-  a:hover {
+  a:hover, a:active {
+    color: inherit;
     color: var(--color-red);
     cursor: pointer;
   }
@@ -99,13 +100,18 @@ nav a {
     font-size: var(--font-size-text-xsm);
     font-weight: var(--font-weight-reg);
 }
+@media screen and (max-width: 920px) {
+  #header-container nav {
+      width: 40%;
+  }
+}
 
 @media screen and (max-width: 780px) {
     header {
         width: 85%;
     }
     #header-container nav {
-        width: 45%;
+        width: 48%;
     }
 }
 @media screen and (max-width: 480px) {
@@ -171,43 +177,52 @@ nav a {
     transform: rotate(-45deg);
   }
   #header-container nav {
-    display: none;
-    transition: opacity 0.4s ease;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transform: scale(0);
+    transform-origin: top;
+    transition: opacity 0.75s ease-in-out, height 0.4s ease;
   }
   input[type="checkbox"]:checked ~ #header-container nav{
-    display: flex;
+    visibility: visible;
     opacity: 1;
+    height: auto;
+    transform: scale(1);
   }
-
-@media screen and (max-width: 920px) {
-    #header-container nav {
-        width: 40%;
-    }
+  #header-container nav a {
+    display: block;
+    visibility: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+  }
+  input[type="checkbox"]:checked ~ #header-container nav a {
+    transform: scale(1);
+    visibility: visible;
 }
-
-    #hamburger-container {
-        display: block;
-    }
-    #header-container {
-        text-align: center;
-        display: block;
-        width: 75%;
-        height: 70%;
-    }
-    #header-container img {
-        margin-top: 8%;
-    }
-    #header-container nav a {
-        margin-top: 25%;
-        padding-left: 17%;    
-    }
-    nav {
-        margin: auto;
-        flex-direction: column;
-        align-items: center;
-    }
+#hamburger-container {
+  display: block;
 }
-
+#header-container {
+  text-align: center;
+  display: block;
+  width: 75%;
+  height: 70%;
+}
+#header-container img {
+  margin-top: 8%;
+}
+#header-container nav a {
+  margin-top: 25%;
+  padding-left: 17%;    
+}
+nav {
+  margin: auto;
+  flex-direction: column;
+  align-items: center;
+}
+}
 /*** 3. MAIN ***/
 #hero {
     background: url(images/headphones_hero_1.jpg);
@@ -253,10 +268,9 @@ nav a {
 }
 
 @media screen and (max-width: 480px) {
-    #hero-block {
-        width: 87%;
-    }
-
+  #hero-block {
+    width: 87%;
+  }
 }
 
 /*** 4. FOOTER ***/
