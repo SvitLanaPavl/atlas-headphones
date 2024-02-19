@@ -277,18 +277,31 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
-    gap: 10%;
+    height: 70vh;
+}
+.text-block h1 {
+    font-size: var(--font-size-title);
+}
+.text-block p {
+    line-height: var(--line-height-wide);
+    margin-top: 40px;
+    font-size: var(--font-size-text);
 }
 .text-block {
+    margin-top: 0px;
     width: 50%;
+    height: 45%;
 }
 .four-block {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
+    height: 35%;
+    font-size: var(--font-size-text-sm);
 }
 .block {
     flex: 1;
@@ -297,6 +310,7 @@ nav {
     align-items: center;
     justify-content: center;
     max-width: 200px;
+    line-height: var(--line-height-wide);
 }
 .image {
     flex: 1;
@@ -308,6 +322,34 @@ nav {
     max-width: 100%;
     height: auto;
 }
+.hex {
+    background-image: url(images/pent.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    width: 190px;
+}
+.hex h1 {
+    font-size: var(--font-size-lg);
+    margin-bottom: 7px;
+}
+.hex p {
+    padding-bottom: 12px;
+
+}
+.our-results {
+    background-image: url(images/headphones_hero_2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+}
+
 
 /*** 4. FOOTER ***/
 
