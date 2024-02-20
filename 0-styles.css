@@ -236,7 +236,7 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -276,6 +276,7 @@ nav {
 
 @media screen and (max-width: 480px) {
   #hero-block {
+    margin-top:300px;
     width: 87%;
   }
 }
@@ -382,6 +383,24 @@ nav {
     background-repeat: no-repeat;
     color: var(--color-white);
 }
+@media screen and (max-width: 1175px) {
+  .our-results .text-block {
+    width: 80%;
+  }
+  .hex {
+    flex-basis: calc(50% - 50px);
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .hex {
+    flex-basis: calc(100% - 20px);
+  }
+  .our-results .four-block {
+    justify-content: center;
+  }
+}
+
 /*SECTION. Contact us */
 /*==================================*/
 .contacts {
@@ -452,6 +471,9 @@ nav {
 @media screen and (max-width: 500px) {
   .contact-form{
     width: 300px
+  }
+  .input_container h4 {
+    width: 30%;
   }
   .input_container:nth-child(4) h4 {
     width: 65%;
