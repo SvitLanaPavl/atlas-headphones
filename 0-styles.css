@@ -226,6 +226,12 @@ nav {
   align-items: center;
 }
 }
+@media screen and (max-width: 300px) {
+  .hamburger-lines {
+    left: 25px;
+    top: 52px;
+  }
+}
 /*** 3. MAIN ***/
 /*=============================*/
 
@@ -247,6 +253,7 @@ nav {
     width: 50%;
     text-align: center;
     align-self: center;
+    padding-bottom: 20px;
 }
 #hero-block h1, h4 {
     line-height: var(--line-height-norm);
@@ -276,7 +283,7 @@ nav {
 
 @media screen and (max-width: 480px) {
   #hero-block {
-    margin-top:300px;
+    margin-top: 300px;
     width: 87%;
   }
 }
@@ -330,7 +337,7 @@ nav {
 }
 @media screen and (max-width: 768px) {
   .text-block {
-    width: 80%;
+    width: 100%;
   }
   .block {
     flex-basis: calc(50% - 50px);
