@@ -498,7 +498,7 @@ nav {
 /*================================*/
 footer {
   width: 100%;
-  height: 250px;
+  height: 300px;
   flex-shrink: 0;
   background-color: #071629;
   display: flex;
@@ -526,7 +526,8 @@ footer {
   opacity: var(--button-hover-opacity);
 }
 #footer-container {
-  height: 50%;
+  padding-top: 50px;
+  height: 80%;
   width: 75%;
   display: flex;
   flex-direction: column;
@@ -546,6 +547,7 @@ footer {
 }
 @media screen and (max-width: 480px) {
   #footer-container {
+    padding: 10px;
     height: 70%;
   }
   #footer-container div {
