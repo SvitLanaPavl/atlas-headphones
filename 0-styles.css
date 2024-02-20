@@ -72,7 +72,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 70%;
-    height: 70px;
+    height: 90px;
     top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -273,5 +273,116 @@ nav {
   }
 }
 
+.we-do {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 70vh;
+}
+.text-block h1 {
+    font-size: var(--font-size-title);
+}
+.text-block p {
+    line-height: var(--line-height-wide);
+    margin-top: 40px;
+    font-size: var(--font-size-text);
+}
+.text-block {
+    margin-top: 0px;
+    width: 50%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.four-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 35%;
+    font-size: var(--font-size-text-sm);
+}
+.block {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    line-height: var(--line-height-wide);
+}
+.image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.block img {
+    max-width: 100%;
+    height: auto;
+}
+.hex {
+    background-image: url(images/pent.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 190px;
+    width: 190px;
+}
+.hex h1 {
+    font-size: var(--font-size-lg);
+    margin-top: 0px;
+}
+.hex p {
+    margin-top: 0px;
+    height: 20%;
+}
+.our-results {
+    background-image: url(images/headphones_hero_2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: var(--color-white);
+}
+.contact-form {
+    height: 70%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: var(--font-family);
+}
+.input_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border-bottom: 1px solid rgba(7, 22, 41, 0.1745);
+}
+.input_container h4 {
+  width: 30%;
+}
+.input_container:nth-child(4) h4 {
+  width: 50%;
+}
+.input_field {
+    height: 30px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    margin: 10px 0;
+}
+.input_field:focus {
+  outline: none;
+}
 /*** 4. FOOTER ***/
 
